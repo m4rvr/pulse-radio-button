@@ -1,11 +1,11 @@
 import '~/assets/css/style.css';
-import GravityRadioButton from '~/components/GravityRadioButton';
+import GravityRadioGroup from '~/components/GravityRadioGroup';
 
-const gravityRadioButtons: NodeListOf<HTMLElement> = document.querySelectorAll(
-  '[data-gravity-radio]',
+const gravityRadioGroups: NodeListOf<HTMLElement> = document.querySelectorAll(
+  '[data-gravity-radio-group]',
 );
 
-gravityRadioButtons.forEach((element: HTMLElement) => {
-  const gravityRadioButton = new GravityRadioButton(element);
-  gravityRadioButton.initialize();
+gravityRadioGroups.forEach((element: HTMLElement) => {
+  const gravityRadioGroup = new GravityRadioGroup(element);
+  gravityRadioGroup.initialize();
 });

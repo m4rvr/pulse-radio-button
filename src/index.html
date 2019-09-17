@@ -5,23 +5,31 @@
     <meta name="theme-color" content="#4F4FED" />
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/favicon.ico">
-    <title>Stack Icon - by Marvin Rudolph</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400&display=swap" rel="stylesheet">
+    <title>Gravity Radio Buttons - by Marvin Rudolph</title>
   </head>
-  <body class="bg-blue-dark flex items-center justify-center h-screen w-full">
-    <div>
+  <body class="bg-blue-dark flex items-center justify-center h-screen w-full font-body text-sm">
+    <div class="leading-none" data-gravity-radio-group>
       <label class="flex items-center text-white cursor-pointer mb-5" data-gravity-radio>
-        <div class="mr-3 overflow-hidden w-6 h-6 bg-gray-dark rounded-full cursor-pointer">
-          <input type="radio" name="gravity" class="opacity-0 w-0 h-0" />
-          <div data-indicator></div>
+        <div class="mr-3 overflow-hidden w-6 h-6 rounded-full cursor-pointer relative">
+          <input type="radio" name="gravity" class="opacity-0 w-0 h-0" checked />
+          <div class="rounded-full w-full h-full absolute top-0 h-0 bg-gray-dark" data-indicator></div>
         </div>
-        <span></span>
+        <span>Gravity</span>
       </label>
       <label class="flex items-center text-white cursor-pointer mb-5" data-gravity-radio>
-        <div class="mr-3 overflow-hidden w-6 h-6 bg-gray-dark rounded-full cursor-pointer">
-          <input type="radio" name="gravity" class="opacity-0 w-0 h-0" />
-          <div data-indicator></div>
+        <div class="mr-3 overflow-hidden w-6 h-6 rounded-full cursor-pointer relative">
+          <input type="radio" name="gravity" class="opacity-0 w-0 h-0" checked />
+          <div class="rounded-full w-full h-full absolute top-0 h-0 bg-gray-dark" data-indicator></div>
         </div>
-        <span></span>
+        <span>is freaking</span>
+      </label>
+      <label class="flex items-center text-white cursor-pointer mb-5" data-gravity-radio>
+        <div class="mr-3 overflow-hidden w-6 h-6 rounded-full cursor-pointer relative">
+          <input type="radio" name="gravity" class="opacity-0 w-0 h-0" checked />
+          <div class="rounded-full w-full h-full absolute top-0 h-0 bg-gray-dark" data-indicator></div>
+        </div>
+        <span>awesome!</span>
       </label>
     </div>
   </body>
