@@ -1,5 +1,5 @@
 # Pulse Radio Button
-Type-safe dynamic stack icon animation written in TypeScript, styled with [tailwindcss](https://tailwindcss.com/) and animated with [GSAP](https://greensock.com/gsap/).
+Type-safe pulse radio button written in TypeScript, styled with [tailwindcss](https://tailwindcss.com/) and animated with [GSAP](https://greensock.com/gsap/).
 Comes with a solid [webpack](https://webpack.js.org/) configuration for developing & building. Supported by ESLint & Prettier for consistent code style.
 
 ![Pulse Radio Button](https://raw.githubusercontent.com/MarvinRudolph/pulse-radio-button/master/screenshots/pulse-radio-button.gif)
