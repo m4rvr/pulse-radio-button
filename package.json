@@ -1,10 +1,14 @@
 {
-    "name": "gravity-radio-button",
+    "name": "pulse-radio-button",
     "version": "1.0.0",
     "license": "MIT",
     "author": {
         "name": "Marvin Rudolph",
         "email": "info@marvin-rudolph.de"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MarvinRudolph/pulse-radio-button.git"
     },
     "main": "dist/bundle.js",
     "types": "dist/types/index.d.ts",
