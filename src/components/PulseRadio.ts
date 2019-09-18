@@ -1,9 +1,9 @@
-import GravityRadioGroup from '~/components/GravityRadioGroup';
-import { TimelineLite, Expo, Elastic } from 'gsap/all';
+import PulseRadioGroup from '~/components/PulseRadioGroup';
+import { TimelineLite, Expo } from 'gsap/all';
 
-class GravityRadio {
+class PulseRadio {
   public isSelected = false;
-  protected radioGroup!: GravityRadioGroup;
+  protected radioGroup!: PulseRadioGroup;
   protected element!: HTMLElement;
   protected radio!: HTMLInputElement | null;
   protected indicator!: HTMLElement | null;
@@ -11,7 +11,7 @@ class GravityRadio {
   protected indicatorCircle!: HTMLElement | null;
   protected static readonly DURATION = 0.3;
 
-  constructor(radioGroup: GravityRadioGroup, element: HTMLElement) {
+  constructor(radioGroup: PulseRadioGroup, element: HTMLElement) {
     this.radioGroup = radioGroup;
     this.element = element;
     this.radio = element.querySelector('input[type="radio"]');
@@ -90,14 +90,14 @@ class GravityRadio {
         ease: Expo.easeIn,
       });
 
-      timeline.to(this.indicatorRing, GravityRadio.DURATION, {
+      timeline.to(this.indicatorRing, PulseRadio.DURATION, {
         autoAlpha: 1,
         scale: 0,
       });
 
       timeline.fromTo(
         this.indicatorCircle,
-        GravityRadio.DURATION,
+        PulseRadio.DURATION,
         {
           autoAlpha: 0,
           scale: 0,
@@ -112,7 +112,7 @@ class GravityRadio {
 
       timeline.to(
         this.indicatorRing,
-        GravityRadio.DURATION,
+        PulseRadio.DURATION,
         {
           autoAlpha: 0,
           scale: 1,
@@ -128,27 +128,13 @@ class GravityRadio {
         ease: Expo.easeInOut,
       });
 
-      timeline.to(this.indicatorCircle, GravityRadio.DURATION * 2, {
+      timeline.to(this.indicatorCircle, PulseRadio.DURATION * 2, {
         autoAlpha: 0,
         scale: 0,
         ease: Expo.easeOut,
       });
-
-      /* timeline.fromTo(
-        this.indicatorRing,
-        GravityRadio.DURATION,
-        {
-          autoAlpha: 1,
-          scale: 0,
-        },
-        {
-          autoAlpha: 0,
-          scale: 1,
-        },
-        '-=0.1',
-      ); */
     }
   }
 }
 
-export default GravityRadio;
+export default PulseRadio;

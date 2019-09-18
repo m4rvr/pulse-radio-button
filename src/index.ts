@@ -1,11 +1,11 @@
 import '~/assets/css/style.css';
-import GravityRadioGroup from '~/components/GravityRadioGroup';
+import PulseRadioGroup from '~/components/PulseRadioGroup';
 
-const gravityRadioGroups: NodeListOf<HTMLElement> = document.querySelectorAll(
-  '[data-gravity-radio-group]',
+const pulseRadioGroups: NodeListOf<HTMLElement> = document.querySelectorAll(
+  '[data-pulse-radio-group]',
 );
 
-gravityRadioGroups.forEach((element: HTMLElement) => {
-  const gravityRadioGroup = new GravityRadioGroup(element);
-  gravityRadioGroup.initialize();
+pulseRadioGroups.forEach((element: HTMLElement) => {
+  const pulseRadioGroup = new PulseRadioGroup(element);
+  pulseRadioGroup.initialize();
 });

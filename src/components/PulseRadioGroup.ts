@@ -1,8 +1,8 @@
-import GravityRadio from '~/components/GravityRadio';
+import PulseRadio from '~/components/PulseRadio';
 
-class GravityRadioGroup {
+class PulseRadioGroup {
   protected element!: HTMLElement;
-  protected radios: GravityRadio[] = [];
+  protected radios: PulseRadio[] = [];
 
   constructor(element: HTMLElement) {
     this.element = element;
@@ -12,21 +12,21 @@ class GravityRadioGroup {
     this.initializeRadios();
   }
 
-  public radioChanged(radio: GravityRadio): void {
+  public radioChanged(radio: PulseRadio): void {
     this.deselectAllRadiosExcept(radio);
   }
 
   protected initializeRadios(): void {
     const radios: NodeListOf<HTMLElement> = this.element.querySelectorAll(
-      '[data-gravity-radio]',
+      '[data-pulse-radio]',
     );
 
     radios.forEach((radio: HTMLElement) => {
-      this.radios.push(new GravityRadio(this, radio));
+      this.radios.push(new PulseRadio(this, radio));
     });
   }
 
-  protected deselectAllRadiosExcept(exceptRadio: GravityRadio): void {
+  protected deselectAllRadiosExcept(exceptRadio: PulseRadio): void {
     const otherRadios = this.radios.filter(
       radio => radio !== exceptRadio && radio.isSelected,
     );
@@ -37,4 +37,4 @@ class GravityRadioGroup {
   }
 }
 
-export default GravityRadioGroup;
+export default PulseRadioGroup;

@@ -12,7 +12,7 @@ module.exports = {
       purple: '#8d70f1',
     },
     fontFamily: {
-      body: 'Montserrat',
+      body: 'Poppins',
     },
   },
   variants: {},
